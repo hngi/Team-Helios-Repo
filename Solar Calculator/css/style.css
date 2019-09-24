@@ -1,36 +1,89 @@
 
 :root {
-    background-color: #12e053;
+    background-color: #6CB56A;
 
 }
 
 .nav {
-    
+    text-align: right;
+    padding:0.5cm;
+}
+.topnav a{
+    color: black;
+    font-family: roboto;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: right;
+
+   width:87px;
+   height: 22px;
+}
+.topnav a:hover{
+color:#6CB56A;
+
+}
+span{
+    padding:0.5cm;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
 }
 
 body {
-   margin: 100px 80px;   
+   margin: 50px 200px;
+   font-size: 14px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  }
 
  #header {
-     font-size: 48px;
+     font-size: 24px;
      text-align: center;
-     color: white;
+     color: whitesmoke;
      margin-bottom: 50px;
+     
  }
 
  .landing {
     background-image: url("https://res.cloudinary.com/dfszquucy/image/upload/v1569253594/enviroment_ppelmq.jpg");
     background-position: center;
     background-size: cover;
-    height: 400px;
+    height: 300px;
     box-shadow: 0 0 5px 2px #282a2d;
  }
 .panel {
     background-color: whitesmoke;
     background-position: center;
     background-size: cover;
-    height: 400px;
+    height: 300px;
     box-shadow: 0 0 5px 2px #282a2d;
+}
+button{
+    background-color: #6CB56A;
+    color: whitesmoke;
+    padding:3px;
+    margin: 0.3cm;
+    font-style: normal;
+    font-size: 12px;
+    border-radius: 5px;
+	border: 1px solid #6CB56A;
+    margin-left: 0.9cm;
+    width: 120px;
+    height: 40px;
+    left: 120px;
+    top: 10px;
+}
+
+.btn {
+    background-color:white;
+    color:#6CB56A;
+    padding:3px;
+    margin: 0.2cm;
+    font-style: normal;
+    margin-right: 0.5cm;
+    border-radius: 5px;
+	border: 1px solid #6CB56A;
+    border-color: #6CB56A;
+    font-size: 12px;
 }
 
