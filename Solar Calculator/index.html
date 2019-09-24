@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -8,72 +9,98 @@
     <link rel='stylesheet' type='text/css' media='screen' href='./css/style.css'>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap');
-        </style>
+    </style>
     <script src='main.js'></script>
 </head>
+
 <body>
-        <!––header & logo section ––>
-    <header id="header">HELIOS</header>
+    <!––header & logo section ––>
+        <header id="header">HELIOS</header>
 
-<section class= "landing">
-        <!––nav section ––>
+        <section class="landing">
+            <!––nav section ––>
 
-    <div class="topnav">
-        <a href="#">Solar calculator</a>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Guide</a>
-   </div>
-    
+                <div class="topnav">
+                    <a href="#">Solar calculator</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Guide</a>
+                </div>
 
 
-    
 
-</nav>
-<!––landing section ––>
-<div class="container">
-        <div class="grid-row">
-            <div class="col">
-                    <p>The power consumption of appliances is generally given in Watts <br>
-                        To calculate the energy you will require, please complete the form.</p>  
-                    </div>  
-        
-        </div>
 
-        <div class="grid-row">
 
-            <div class= "col">
-                    <button>Contact us</button>
-                    <button> Energy Calculator</button>
+                </nav>
+                <!––landing section ––>
+                    <div class="container">
+                        <div class="grid-row">
+                            <div class="col">
+                                <p>The power consumption of appliances is generally given in Watts <br>
+                                    To calculate the energy you will require, please complete the form.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="grid-row">
+
+                            <div class="col">
+                                <button>Contact us</button>
+                                <button> Energy Calculator</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+        </section>
+
+        <!-- Sas section -->
+        <section class="panel" id="sas-section">
+
+            
+            <div class="parent-div">
+                <select>
+                    <option>Select your location</option>
+                </select>
+                <div class="child-div">
+                    <form class="form-inline" action="" method="">
+                        <div>
+                            <label for="tv">TV</label>
+                            <input type="text" id="ratings" placeholder="Ratings (watts)">
+                            <input type="text" id="ontime" placeholder="Ontime (hours) per day">
+                            <input type="text" id="energ" placeholder="Energy required">
+
+                            <div class="break"></div>
+                            <br/>
+                            <a id="add-more">Add more</a>
+                        </div>
+                    </form>
+
+                    <br />
+                    <hr width="50%" />
+
+                    <div class="row">
+                        <div class="column">
+                            <button>Calculate</button>
+                        </div>
+                        <div class="column">
+                            <h4>You require <span>xxx</span> watts per day</h4>
+                            <h4>Your required solar panel rating based on your location is <span>xxx</span></h4>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div >
-        
-    
-
-        
-      
-    
-
-</section>
-<!––Sas section ––>
-<section class= "panel">
-<form>
-
-<div class="container">
-    <div class="grid-row">
-        <div class="col">
-        
-        </div>
-      
-    
-        </div>
-      </div>
 
 
-</form>
-</section>
-<!––ololades section ––>
-    <footer id="footer">
-<a href="">Github</a>
-    </footer>
+        </section>
+
+        <!––ololades section ––>
+            <footer id="footer">
+                <a href="">Github</a>
+            </footer>
 </body>
+
 </html>
