@@ -1,4 +1,5 @@
 
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -105,6 +106,7 @@ li a:hover, li a:active {
 .description {
     width: 85%;
     font-size: 20px;
+    font-weight: bold;
 }
 
 @media (max-width: 1023px) {
@@ -116,6 +118,23 @@ li a:hover, li a:active {
         margin-top: 50px;
     }
 }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+
   
   
   
