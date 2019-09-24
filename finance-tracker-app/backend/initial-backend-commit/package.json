@@ -4,9 +4,10 @@
   "description": "A Solar Calculator that calculates how much power needed to run a home",
   "main": "index.js",
   "scripts": {
-    "start": "node ./dist/index.js",
-    "build": "babel -d ./dist ./api -s",
-    "dev": "nodemon --exec babel-node ./api/index.js",
+    "start": "concurrently \"node ./solar/index.js\" \"node ./finance/index.js\"",
+    "build": "babel -d ./solar ./solar_api -s && babel -d ./finance ./finance_api -s",
+    "solar-dev": "nodemon --exec babel-node ./solar_api/index.js",
+    "finance-dev": "nodemon --exec babel-node ./finance_api/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -30,6 +31,7 @@
     "body-parser": "^1.19.0",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
+    "concurrently": "^4.1.2",
     "cors": "^2.8.5",
     "debug": "^4.1.1",
     "dotenv": "^6.2.0",
