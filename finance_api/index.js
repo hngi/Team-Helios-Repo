@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 6000;
 
 const app = express();
 app.use(cors());
@@ -14,15 +14,15 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
   res.status(200).json({
     status: 200,
-    message: "Welcome to Solar Calculator",
+    message: 'Welcome to Finance API',
   });
 });
 
 // catch 404 and forward to error handler
-app.use('*', (req, res, next) => {
+app.use('*', (req, res) => {
   res.status(404).json({
     status: 404,
-    message: "Route Not Found",
+    message: 'Route Not Found',
   });
 });
 
