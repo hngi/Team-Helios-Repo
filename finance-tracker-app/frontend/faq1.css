@@ -1,0 +1,61 @@
+
+  /*button styling for the different question field*/
+.accordion {
+  background-color:white;
+  color: green;
+  cursor: pointer;
+  padding: 18px;
+  border: 12px;
+  border-radius: 8px;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  width: 400px;
+  font-family: Georgia;
+}
+
+/*button hover styling*/
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+/*styling of the button container*/
+.container {
+    text-align: center;
+    width: 500px;
+}
+
+/*page heading styling*/
+h2 {
+    color: green;
+    font-family: Georgia;
+    margin-bottom: 30px;
+}
+
+/*hidden text field content area styling*/
+.panel {
+  padding: 0 18px;
+  width: 400px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+  text-align: justify;
+}
+
+p{
+  color: green;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 100px;
+  font-family: Georgia;
+}
+
+footer {
+    background-color: green;
+    width: 100%;
+    color: white;
+    height: 150px;
+}
+
+
