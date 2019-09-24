@@ -1,0 +1,43 @@
+input[type="text"] {
+    width:50%;
+    display: block;
+    margin-top: 10px;
+    padding: 7px;
+    outline: none;
+    font-family: 'Fugaz One', cursive, Sans-Serif;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 70px;
+    font-family: 'Courgette', cursive, Sans-Serif;
+    font-weight: bold;
+}
+
+
+.signup-img {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-img h3 {
+    color: lightgreen;
+}
+
+.signup-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 80px auto 10px;
+}
+
+.btn {
+    max-width: 30%;
+    margin-top: 10px;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
