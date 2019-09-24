@@ -57,7 +57,6 @@ body {
     background-position: center;
     background-size: cover;
     height: 300px;
-    box-shadow: 0 0 5px 2px #282a2d;
 }
 
 .panel {
@@ -65,7 +64,6 @@ body {
     background-position: center;
     background-size: cover;
     height: 300px;
-    box-shadow: 0 0 5px 2px #282a2d;
 }
 
 button {
