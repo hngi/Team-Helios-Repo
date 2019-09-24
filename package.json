@@ -1,0 +1,50 @@
+{
+  "name": "team-helios-solar-tracker",
+  "version": "1.0.0",
+  "description": "A Solar Calculator that calculates how much power needed to run a home",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./finance/index.js",
+    "build": "babel -d ./finance ./finance_api -s",
+    "dev": "nodemon --exec babel-node ./finance_api/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hngi/Team-Helios-Solar-Tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hngi/Team-Helios-Solar-Tracker/issues"
+  },
+  "homepage": "https://github.com/hngi/Team-Helios-Solar-Tracker#readme",
+  "dependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "@babel/runtime": "^7.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^6.2.0",
+    "es6-promise": "^4.2.6",
+    "express": "^4.17.1",
+    "isomorphic-fetch": "^2.2.1",
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.3.1",
+    "eslint": "^5.13.0",
+    "nodemon": "^1.18.10",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
