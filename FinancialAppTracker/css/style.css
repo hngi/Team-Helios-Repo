@@ -1,5 +1,7 @@
 
 
+
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -160,21 +162,108 @@ li a:hover, li a:active {
   
   
   
+  
  
 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
- 
+    font-family: 'Fugaz One', cursive, Sans-Serif;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+li:first-child {
+    margin-right: 40px;
+}
+
+li a:link, li a:visited {
+  border: 2px solid lightgreen;
+  color: black;
+  padding: 5px 25px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+li a:hover, li a:active {
+    color: white;
+    background-color: green;
+}
+
+.signin-container {
+    text-align: center;
+}
+
+.login-container {
+    border: 2px solid lightgreen;
+    text-align: center;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, .5);
+}
+
+.mid-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 80px auto 50px;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: #bbb;
+    border-radius: 50%;
+    z-index: -100;
+    top: -30px;
+    left: -50px;
+    opacity: 0.5;
+}
+
+.circle1 {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background-color: lightgreen;
+    border-radius: 50%;
+    z-index: -80;
+    top: 50px;
+    left: 0px;
+    opacity: 0.5;
+}
+
+.text {
+    position: absolute;
+    font-size: 35px;
+    top: 30px;
+    left: 100px;
+}
+
+.text1 {
+    position: absolute;
+    font-size: 45px;
+    top: 40px;
+    left: 150px;
+    font-weight: bold;
+    color: lightgreen;
+}
+
+.description {
+    width: 85%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (max-width: 1023px) {
+    .mid-container {
+        flex-direction: column;
+    }
+    
+    .mid-logo {
+        margin-top: 50px;
+    }
+}
