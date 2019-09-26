@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Helios Solar Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    
+    <body>
+        <nav id="navbar-example2" class="navbar navbar-light bg-light fixed-top header">
+            <a class="navbar-brand" href="#home">Helios Solar Calculator</a>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#guide">GUIDE</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#calculator">CALCULATOR</a>
+                </li>
+            </ul>
+            </nav>
+
+        <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+            <div class="banner-container" id="home">
+                <div class="banner-text">
+                    <h2>Solar Calculator</h2>
+                    <h3>For Everyone</h3>
+                    <hr>
+                    <p>Solar panels are perfect if you're lookin for a reliable source of additional power and energy for your home or office</p>
+                    <button>FIND OUT MORE</button>
+                </div>
+            </div>
+    
+            <div class="guide-container" id="guide">
+                <div class="guide-text col-auto">
+                    <h2>How The Calculator Works</h2>
+                    <hr>
+                    <p>When you fill the calculator form by inputing the power ratings of your equipments, the system will multiply the power rating data you provided for each equipment by their respective number of working hours.</p>
+                    <p>The result is summed up and depending on your location, a multiplier is applied which is a function of the possible hours of sunshine available in a day within your location.</p>
+                    <p>With the result, we are able to recommend the power rating of the solar panel you require to power your home appliances.</p>
+                </div>
+                
+                <div class="guide-img col-auto">
+                    <img src="img/photovoltaic-491702_1920.jpg" alt="cal-image">
+                </div>
+            </div>
+        </div>
+
+        <div class="calculator" id="calculator">
+            <h2>Calculator</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="title">Name of Appliance</label>
+                        <input class="form-control" type="text" id="title" list="appliances" name="ada">
+                        <datalist id="appliances">
+                        </datalist>
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="input">Capacity in Watts</label>
+                        <input class="form-control" id="input" type="number">
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <label for="hours">Hours in use</label>
+                        <input class="form-control" id="hours" type="number">
+                    </div>
+                </div>
+                
+                <div class="cal-btn">
+                    <div class="col-auto">
+                        <button id="addBtn" class="btn btn-primary btn-4">Calculate</button>
+                    </div>
+                    <div class="col-auto">
+                        <button id="cancel" class="btn btn-primary btn-4">Restart</button>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="list-box">
+                <h3>Device details:</h3>
+                <ul id="list-parent-container"></ul>
+            </div>
+        
+            <div id="totalWatts">Total Wattage = <span class="wattSpan">0</span></div>
+        
+            <div id="totalHours">Total Hours = <span class="hourSpan">0</span></div>
+            <button id="calculate" class="btn btn-primary btn-4">Restart</button>
+        
+            <div class="result"></div>
+        </div>
+        
+        <footer class="footer">
+            
+            <div class="helios col-auto">
+                <h2>Helios</h2>
+                <h6>Solar Calculator</h6>
+                <br>
+                <p>With our solar you can calculate you can know the amount of power needed to run your home or office</p>
+            </div>
+            
+            <div class="social col-auto">
+                <h2>Socials</h2>
+                <div>
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-google"></a>
+                    <a href="#" class="fa fa-linkedin"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+                <p>Copywrite &copy; 2019. All rights reserved.</p>
+                <p>Designed by Team Helios</p>
+            </div>
+            
+        </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>

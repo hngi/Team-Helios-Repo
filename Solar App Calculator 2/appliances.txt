@@ -1,0 +1,15 @@
+[
+    "Television",
+    "Electric Iron",
+    "Microwave",
+    "Electric Kettle",
+    "Deep Frezer",
+    "Refrigerator",
+    "Mobile Phone Charger",
+    "Home Theatre System",
+    "Air Conditioner",
+    "Standing Fan",
+    "Ceiling Fan",
+    "Electric Stove",
+    "Light Bulb"
+]
