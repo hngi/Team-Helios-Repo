@@ -4,7 +4,8 @@
   "description": "A finance tracker to keep track of your expense",
   "main": "server.js",
   "scripts": {
-    "start": "node ./finance_api/server.js",
+    "start": "node ./dist/server.js",
+    "build": "babel -d ./dist ./Finance_api -s",
     "dev": "nodemon finance_api/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,6 +20,13 @@
   },
   "homepage": "https://github.com/hngi/Team-Helios-Solar-Tracker#readme",
   "dependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "@babel/runtime": "^7.4.3",
     "bcrypt": "^3.0.6",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.19.0",
@@ -42,6 +50,13 @@
     "validator": "^11.1.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-classes": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.4.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
