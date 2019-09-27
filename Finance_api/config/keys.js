@@ -1,4 +1,4 @@
 module.exports = {
-    mongoURI: "mongodb+srv://Ayomikun:fintracker@cluster0-zl0wl.mongodb.net/test?retryWrites=true&w=majority",
+    mongoURI: "mongodb://fintrack:fintrack12345@ds153412.mlab.com:53412/fintrack",
     secretOrKey: "secret"
   };
