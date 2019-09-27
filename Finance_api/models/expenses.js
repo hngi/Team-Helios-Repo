@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const expensesSchema = new Schema({
@@ -7,7 +7,7 @@ const expensesSchema = new Schema({
     description : String,
     user : {
         type: Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'users'
     }
 }, {timestamps: true});
 

@@ -8,46 +8,63 @@
         <title>Sign Up</title>
         <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
-        <link href="/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link rel='stylesheet' type='text/css' href='/css/style.css' />
         <link rel='stylesheet' type='text/css' href='/css/signup.css' />
+        <link rel='stylesheet' type='text/css' href='/css/responsive.css'>
     </head>
     <body>
-        
-        <div class="header">
-        
-            <div class="logo">
-               <h3>Helios Finance Tracker</h3>
+        <div class="finance">
+            <div class="header">
+            
+                <div class="logo">
+                   <h3>Helios Finance Tracker</h3>
+                </div>
+                
+                <div class="top-nav">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="/faq">FAQs</a></li>
+                    </ul>
+                </div>
+            
             </div>
             
-            <div class="top-nav">
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="/faq">FAQs</a></li>
-                </ul>
-            </div>
-        
-        </div>
-        
-        
-        <div class="signup-container">
             
-            <div class="signup-img">
-                <h3>Sign Up</h3>
-                <img src="/img/man.png" alt="" width="450px">
+            <div class="signup-container">
+                <div id="signup-flex"> 
+                    <div class="signup-img signup-item">
+                        <img src="/img/man.png" alt="" width="450px">
+                    </div>
+                    
+                    <div class="signup-form-container signup-item" id="signup-form">
+                        <h3><span style="color: lightgreen">Join our platform today!</span> <br>And never worry about loosing track of your spendings!</h3>
+                        <form class="signup-form" action="/register" method="POST">
+                            <% if(success_msg != ""){ %>
+                                <div class="alert alert-primary shadow-sm mb-3">
+                                    <%= success_msg %>
+                                </div>
+                                <% } %>
+                                <% if(error_msg != ""){ %>
+                                <div class="alert alert-danger shadow-sm mb-3">
+                                    <%= error_msg %>
+                                </div>
+                                <% } %>
+                                <% if(error != ""){ %>
+                                <div class="alert alert-danger shadow-sm mb-3">
+                                    <%= error %>
+                                </div>
+                                <% } %>
+                            <input type="text" placeholder="Full Name" name ="name">
+                            <input type="email" placeholder="Email Address" name="email" required>
+                            <input type="password" placeholder="Password" name="password" required>
+                            <input type="password" placeholder="Confirm Password" name="password2">
+                            <button class="btn btn-success">Register</button>
+                        </form>
+                    </div>
+                </div>
+                
             </div>
-            
-            <div class="signup-form-container">
-                <h3><span style="color: lightgreen">Join our platform today!</span> <br>And never worry about loosing track of your spendings!</h3>
-                <form class="signup-form" action="/register" method="POST">
-                    <input type="text" placeholder="Full Name" name="name">
-                    <input type="email" placeholder="Email Address" name="email">
-                    <input type="password" placeholder="Password" name="password">
-                    <input type="password2" placeholder="Repeat Password" name="password2">
-                    <button class="btn btn-success">Register</button>
-                </form>
-            </div>
-            
         </div>
         
         <script src='/main.js'></script>

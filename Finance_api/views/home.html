@@ -4,82 +4,143 @@
         <meta charset="utf-8"/>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link rel="icon" href="img/favicon.ico">
+        <link rel="icon" href="/img/favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
         <title>Financial App Tracker</title>
-        <link href="/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" />
         <link rel='stylesheet' type='text/css' href='/css/style.css'>
+        <link rel='stylesheet' type='text/css' href='/css/responsive.css'>
     </head>
     <body>
-        
-        <div class="header">
-        
-            <div class="logo">
-                <h3>Helios Finance Tracker</h3>
+        <div class="finance">
+            <div class="header">
+            
+                <div class="logo">
+                    <h3>Helios Finance Tracker</h3>
+                </div>
+                
+                <div class="top-nav">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="/faq">FAQs</a></li>
+                    </ul>
+                </div>
+                
             </div>
             
-            <div class="top-nav">
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="/faq">FAQs</a></li>
-                </ul>
+            <div class="container app-container">
+                    <div class="row">
+                            <div class="col-12">
+                                    <div class="table-responsive bg-white shadow-sm">
+                                            <% if(success_msg != ""){ %>
+                                                <div class="alert alert-primary shadow-sm mb-3">
+                                                    <%= success_msg %>
+                                                </div>
+                                                <% } %>
+                                                <% if(error_msg != ""){ %>
+                                                <div class="alert alert-danger shadow-sm mb-3">
+                                                    <%= error_msg %>
+                                                </div>
+                                                <% } %>
+                                                <% if(error != ""){ %>
+                                                <div class="alert alert-danger shadow-sm mb-3">
+                                                    <%= error %>
+                                                </div>
+                                                <% } %>
+                                        <% if(userExpenses == "") { %>
+                                        <div class="alert alert-primary">No Record for now</div>
+                                        <% } %>
+                                        <table class="table table-vertical-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th>Items</th>
+                                                    <th>Description</th>
+                                                    <th>Amount</th>
+                                                    <th>Author</th>
+                                                    <th>Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% for(var item of userExpenses) { %>
+                                                <tr>
+                                                    <td><%= item.items %></td>
+                                                    <td><%= item.description %></td>
+                                                    <td>₦<%= item.amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') %></td>
+                                                    <td><%= item.user.email %></td>
+                                                    <td><%= item.createdAt.toDateString() %></td>
+                                                </tr>
+                                                <% } %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                            </div>
+                    </div>
+                        <form action="/expenses/create" method="POST" class="mt-3">
+                            <div class="form-group">
+                                <input type="text" name="items" placeholder="Item" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" name="amount" placeholder="Amount" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="Description" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                <!-- <form name="cart">
+                    <table name="cart" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Product</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Item Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr name="line_items">
+                                <td><button name="remove" class="btn btn-danger btn-sm">Remove</button></td>
+                                <td><input type="text" class="form-control form-control-sm" required /></td>
+                                <td><textarea rows="3"></textarea></td>
+                                <td><input type="text" name="price" value="0.00" class="form-control form-control-sm" /></td>
+                                <td><input type="text" name="item_total" jAutocalc="{price}" class="form-control form-control-sm" required /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;</td>
+                                <td>Subtotal</td>
+                                <td>&nbsp;</td>
+                                <td><input type="text" name="sub_total" jAutocalc="SUM({item_total})" class="form-control form-control-sm" /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;</td>
+                                <td>Tax</td>
+                                <td>
+                                    <select name="tax" class="form-control">
+                                        <option value=".06"> CT Tax</option>
+                                        <option value=".00">Tax Free</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" name="tax_total" jAutocalc="{sub_total} * {tax}" class="form-control form-control-sm" /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">&nbsp;</td>
+                                <td>Total</td>
+                                <td>&nbsp;</td>
+                                <td><input type="text" name="grand_total" jAutocalc="{sub_total} + {tax_total}" class="form-control form-control-sm" /></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <button name="add" class="btn btn-primary">Add Row</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form> -->
             </div>
-            
-        </div>
-        
-        <div class="container app-container">
-            <p><br /></p>
-            <form name="cart">
-                <table name="cart" class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Product</th>
-                            <th>Description</th>
-                            <th>Price</th>
-                            <th>Item Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr name="line_items">
-                            <td><button name="remove" class="btn btn-danger btn-sm">Remove</button></td>
-                            <td><input type="text" class="form-control form-control-sm" required /></td>
-                            <td><textarea rows="3"></textarea></td>
-                            <td><input type="text" name="price" value="0.00" class="form-control form-control-sm" /></td>
-                            <td><input type="text" name="item_total" jAutocalc="{price}" class="form-control form-control-sm" required /></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">&nbsp;</td>
-                            <td>Subtotal</td>
-                            <td>&nbsp;</td>
-                            <td><input type="text" name="sub_total" jAutocalc="SUM({item_total})" class="form-control form-control-sm" /></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">&nbsp;</td>
-                            <td>Tax</td>
-                            <td>
-                                <select name="tax" class="form-control">
-                                    <option value=".06"> CT Tax</option>
-                                    <option value=".00">Tax Free</option>
-                                </select>
-                            </td>
-                            <td><input type="text" name="tax_total" jAutocalc="{sub_total} * {tax}" class="form-control form-control-sm" /></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">&nbsp;</td>
-                            <td>Total</td>
-                            <td>&nbsp;</td>
-                            <td><input type="text" name="grand_total" jAutocalc="{sub_total} + {tax_total}" class="form-control form-control-sm" /></td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <button name="add" class="btn btn-primary">Add Row</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </form>
         </div>
         
         <script src="/js/jquery.min.js"></script>

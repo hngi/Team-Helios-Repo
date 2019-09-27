@@ -16,7 +16,8 @@ h1 {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    font-family: 'Fugaz One', cursive, Sans-Serif;
+    font-family: cursive, Sans-Serif;
+    font-weight: normal;
 }
 
 ul {
@@ -107,6 +108,15 @@ li a:hover, li a:active {
     width: 85%;
     font-size: 20px;
     font-weight: bold;
+}
+#flex-container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#flex-container p{
+    text-align: center;
 }
 
 @media (max-width: 1023px) {
