@@ -230,3 +230,4 @@ router.get('/log-out', function (req, res, next) {
   return res.redirect('/');
 });
 module.exports = router;
+//# sourceMappingURL=index.js.map

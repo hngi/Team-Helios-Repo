@@ -4,8 +4,8 @@
   "description": "A finance tracker to keep track of your expense",
   "main": "server.js",
   "scripts": {
-    "start": "node ./Finance_api/server.js",
-    "build": "babel Finance_api --out-dir dist",
+    "start": "node ./dist/server.js",
+    "build": "babel -d ./dist ./Finance_api -s",
     "dev": "nodemon --exec babel-node ./Finance_api/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
