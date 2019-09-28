@@ -1,0 +1,99 @@
+  /* body{
+        font-family: 'Roboto', sans-serif;
+    } */
+        /* body{
+            background: url(/img/money.png) no-repeat;
+            background-size: cover;
+            height: 100%;
+        } */
+        .login-container {
+            width: 360px;
+            /* margin: 0 auto; */
+        }
+    
+        @media screen and (max-width: 768px) {
+            .login-container,
+            .register-box {
+                width: 95% !important;
+                margin-top: 20px;
+            }
+        }
+    
+        .login-box-body,
+        .register-box-body {
+            background: #fff;
+            padding: 20px;
+            border-top: 0;
+            color: #666;
+        }
+        .form-control {
+        height: 50px;
+        line-height: 50px;
+        padding: 15px;
+        background: none;
+        border-top: 0;
+        border-left: 0;
+        border-radius: 0;
+        border-right: 0;
+        font-size: 0.875rem;
+        background: #fff;
+        border-radius: 3px;
+        border: 1px solid lightgreen;
+    }
+    .form-control:focus {
+        color: #5f656b;
+        background: none;
+        outline: 0;
+        box-shadow: none;
+        border: 1px solid lightgreen !important;
+    }
+    .btn.btn-outline-info{
+        border: 2px solid lightgreen
+    }
+    .btn.btn-outline-info:hover{
+        background:lightgreen
+    }
+    .btn.btn-outline-info:focus{
+        background:lightgreen !important;
+        border: 2px solid lightgreen !important;
+    }
+    p.separator {
+            position: relative;
+            margin: 1em 0;
+        }
+    
+        p.separator span {
+            background-color: #fff;
+            padding: 0 1em;
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+        }
+    
+        p.separator:after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: #e6e6e6;
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+        /* .overlay{
+            background: rgba(0, 0, 0, 0.5);
+            background-size: cover;
+            height: 100%;
+        }
+        @media screen and (max-width: 1000px){
+            .overlay{
+                height: 100%;
+            }
+        } */
+        body {
+            font-family: 'Roboto', sans-serif !important;
+      min-height:100%;
+      /* background:linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(/img/money.png); */
+      background-size:cover;
+      background: url(/img/money.png);
+      /* background-repeat: no-repeat; */
+      }

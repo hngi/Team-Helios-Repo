@@ -14,17 +14,17 @@
     <!-- <link rel='stylesheet' type='text/css' href='/css/responsive.css'> -->
     <link rel='stylesheet' type='text/css' href='/css/style.css'>
     <style>
-    body{
+      /* body{
         font-family: 'Roboto', sans-serif;
-    }
-        body{
-            background: url(/img/126.jpg) no-repeat;
+    } */
+        /* body{
+            background: url(/img/money.png) no-repeat;
             background-size: cover;
             height: 100%;
-        }
+        } */
         .login-container {
 		width: 360px;
-		margin: 0 auto;
+		/* margin: 0 auto; */
 	}
 
 	@media screen and (max-width: 768px) {
@@ -54,13 +54,24 @@
 	font-size: 0.875rem;
 	background: #fff;
 	border-radius: 3px;
-	border: 1px solid #dee2e6 !important;
+	border: 1px solid lightgreen;
 }
 .form-control:focus {
 	color: #5f656b;
 	background: none;
 	outline: 0;
-	box-shadow: none;
+    box-shadow: none;
+    border: 1px solid lightgreen !important;
+}
+.btn.btn-outline-info{
+    border: 2px solid lightgreen
+}
+.btn.btn-outline-info:hover{
+    background:lightgreen
+}
+.btn.btn-outline-info:focus{
+    background:lightgreen !important;
+    border: 2px solid lightgreen !important;
 }
 p.separator {
 		position: relative;
@@ -84,7 +95,7 @@ p.separator {
 		top: 50%;
 		left: 0;
 	}
-    .overlay{
+    /* .overlay{
         background: rgba(0, 0, 0, 0.5);
         background-size: cover;
         height: 100%;
@@ -93,7 +104,15 @@ p.separator {
         .overlay{
             height: 100%;
         }
-    }
+    } */
+    body {
+        font-family: 'Roboto', sans-serif !important;
+  min-height:100%;
+  /* background:linear-gradient(0deg,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(/img/money.png); */
+  background-size:cover;
+  background: url(/img/money.png);
+  /* background-repeat: no-repeat; */
+  }
     </style>
 </head>
 <body>

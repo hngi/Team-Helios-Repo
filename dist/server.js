@@ -61,7 +61,7 @@ var options = {
   useCreateIndex: true,
   useUnifiedTopology: true
 };
-var uri = "mongodb://localhost/fintrack";
+var uri = "mongodb://fintrack:fintrack12345@ds153412.mlab.com:53412/fintrack";
 
 _mongoose["default"].connect(uri, options).then(function (connected) {
   return console.log("Database connection established");
@@ -81,3 +81,4 @@ app.listen(port, function () {
   console.log("Server is running on port: ".concat(port));
 });
 module.exports = app;
+//# sourceMappingURL=server.js.map

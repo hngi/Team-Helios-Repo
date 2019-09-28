@@ -20,3 +20,4 @@ var expensesSchema = new Schema({
   timestamps: true
 });
 module.exports = _mongoose["default"].model('Expenses', expensesSchema);
+//# sourceMappingURL=expenses.js.map

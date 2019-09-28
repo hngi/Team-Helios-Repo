@@ -28,3 +28,4 @@ module.exports = function validateLoginInput(data) {
     isValid: (0, _isEmpty["default"])(errors)
   };
 };
+//# sourceMappingURL=login.js.map
