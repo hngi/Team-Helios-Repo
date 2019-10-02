@@ -50,3 +50,4 @@ module.exports = function validateRegisterInput(data) {
     isValid: (0, _isEmpty["default"])(errors)
   };
 };
+//# sourceMappingURL=register.js.map

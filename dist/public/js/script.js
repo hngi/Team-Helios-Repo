@@ -29,3 +29,4 @@ $('button[name=add]').click(function (e) {
   $new.find('input[type=text]').val('');
   autoCalcSetup();
 });
+//# sourceMappingURL=script.js.map
