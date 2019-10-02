@@ -49,3 +49,4 @@ userSchema.methods.comparePassword = function (candidatePassword, cb) {
 };
 
 module.exports = _mongoose["default"].model('users', userSchema);
+//# sourceMappingURL=users.js.map
