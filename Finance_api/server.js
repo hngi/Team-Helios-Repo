@@ -51,11 +51,7 @@ const options = {
   useUnifiedTopology: true
 }
 const uri =
-<<<<<<< HEAD
 "mongodb://fintrack:fintrack12345@ds153412.mlab.com:53412/fintrack";
-=======
-  "mongodb://fintrack:fintrack12345@ds153412.mlab.com:53412/fintrack";
->>>>>>> edd7e34a345f744cbc607e6fa75751618440ecb8
 mongoose.connect(uri, options)
   .then(connected => console.log(`Database connection established`))
   .catch(err => console.log(`There was an error connecting to database, the err is ${err}`));
