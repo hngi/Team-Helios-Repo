@@ -12,8 +12,8 @@ router.post("/register", async (req, res) => {
   // Form validation
   const { errors, isValid } = validateRegisterInput(req.body);
   // Check validation
-  if (!isValid) {
-    req.flash('success_msg', errors);
+  if (req.body.password.trim().length < 6) {
+    req.flash('success_msg', 'Password should at least be 5 characters or more');
     return res.redirect('back');
   } else {
     let check = await User.findOne({ email: req.body.email });
