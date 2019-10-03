@@ -4,50 +4,48 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 
 var _validator = _interopRequireDefault(require("validator"));
 
-var _isEmpty = _interopRequireDefault(require("is-empty"));
+var _spaceTrimer = _interopRequireDefault(require("./spaceTrimer"));
 
 module.exports = function validateRegisterInput(data) {
-  var errors = {}; // Convert empty fields to an empty string so we can use validator functions
+  var errors = {};
+  var alphabetRegex = /^[A-Za-z ]+$/; // Convert empty fields to an empty string so we can use validator functions
 
-  data.name = !(0, _isEmpty["default"])(data.name) ? data.name : "";
-  data.email = !(0, _isEmpty["default"])(data.email) ? data.email : "";
-  data.password = !(0, _isEmpty["default"])(data.password) ? data.password : "";
-  data.password2 = !(0, _isEmpty["default"])(data.password2) ? data.password2 : ""; // Name checks
+  var name = (0, _spaceTrimer["default"])(data.name);
+  var email = (0, _spaceTrimer["default"])(data.email);
+  var password = (0, _spaceTrimer["default"])(data.password);
+  var password2 = (0, _spaceTrimer["default"])(data.password2); // Name checks
 
-  if (_validator["default"].isEmpty(data.name)) {
-    errors.name = "Name field is required";
+  if (!alphabetRegex.test(name)) {
+    errors.name = 'Name should be an alphabet';
+  }
+
+  if (!_validator["default"].isLength(name, {
+    min: 4,
+    max: 30
+  })) {
+    errors.name = 'Name should be at least 4 characters long';
   } // Email checks
 
 
-  if (_validator["default"].isEmpty(data.email)) {
-    errors.email = "Email field is required";
-  } else if (!_validator["default"].isEmail(data.email)) {
-    errors.email = "Email is invalid";
+  if (!_validator["default"].isEmail(email)) {
+    errors.email = 'Email is invalid';
   } // Password checks
 
 
-  if (_validator["default"].isEmpty(data.password)) {
-    errors.password = "Password field is required";
-  }
-
-  if (_validator["default"].isEmpty(data.password2)) {
-    errors.password2 = "Confirm password field is required";
-  }
-
-  if (!_validator["default"].isLength(data.password, {
-    min: 6,
+  if (!_validator["default"].isLength(password, {
+    min: 5,
     max: 30
   })) {
-    errors.password = "Password must be at least 6 characters";
+    errors.password = 'Password must be at least 5 characters';
   }
 
-  if (!_validator["default"].equals(data.password, data.password2)) {
-    errors.password2 = "Passwords must match";
+  if (password !== password2) {
+    errors.password2 = 'Passwords must match';
   }
 
   return {
     errors: errors,
-    isValid: (0, _isEmpty["default"])(errors)
+    isValid: Object.keys(errors).length === 0
   };
 };
 //# sourceMappingURL=register.js.map

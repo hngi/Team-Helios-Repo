@@ -36,39 +36,42 @@ function () {
             _validateRegisterInpu = validateRegisterInput(req.body), errors = _validateRegisterInpu.errors, isValid = _validateRegisterInpu.isValid; // Check validation
 
             if (isValid) {
-              _context.next = 6;
+              _context.next = 7;
               break;
             }
 
-            req.flash('success_msg', errors);
+            if (errors.name !== undefined) req.flash('success_msg', errors.name);
+            if (errors.email !== undefined) req.flash('success_msg', errors.email);
+            if (errors.password !== undefined) req.flash('success_msg', errors.password);
+            if (errors.password2 !== undefined) req.flash('success_msg', errors.password2);
             return _context.abrupt("return", res.redirect('back'));
 
-          case 6:
-            _context.next = 8;
+          case 7:
+            _context.next = 9;
             return User.findOne({
               email: req.body.email
             });
 
-          case 8:
+          case 9:
             check = _context.sent;
 
             if (!check) {
-              _context.next = 14;
+              _context.next = 13;
               break;
             }
 
             req.flash('success_msg', 'Email already in use');
             return _context.abrupt("return", res.redirect('back'));
 
-          case 14:
-            _context.next = 16;
+          case 13:
+            _context.next = 15;
             return User.create(req.body);
 
-          case 16:
+          case 15:
             req.flash('success_msg', 'Account created successfully, you can now login');
             return _context.abrupt("return", res.redirect('/'));
 
-          case 18:
+          case 17:
           case "end":
             return _context.stop();
         }

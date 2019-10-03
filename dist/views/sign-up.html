@@ -46,7 +46,15 @@
                         <form class="signup-form" action="/register" method="POST">
                             <% if(success_msg != ""){ %>
                                 <div class="alert alert-primary shadow-sm mb-3">
-                                    <%= success_msg %>
+                                    <% if(success_msg.length === 1) { %>
+                                        <strong> <%= success_msg %> </strong>
+                                     <% } else { %>
+                                         <ul>
+                                             <% success_msg.forEach(function(msg) { %>
+                                                 <li> <strong> <%= msg %> </strong></li>
+                                             <% }) %>
+                                         </ul>
+                                     <% } %> 
                                 </div>
                                 <% } %>
                                 <% if(error_msg != ""){ %>
