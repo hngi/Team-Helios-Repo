@@ -7,8 +7,11 @@ const expensesSchema = new Schema({
     description : String,
     user : {
         type: Schema.Types.ObjectId,
-        ref: 'User'
-    }
+        ref: 'users'
+    },
+    week: String,
+    month: String,
+    year: String
 }, {timestamps: true});
 
 module.exports = mongoose.model('Expenses', expensesSchema);
