@@ -20,6 +20,12 @@
   },
   "homepage": "https://github.com/hngi/Team-Helios-Solar-Tracker#readme",
   "dependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
     "@babel/runtime": "^7.4.3",
     "bcrypt": "^3.0.6",
     "bcrypt-nodejs": "0.0.3",

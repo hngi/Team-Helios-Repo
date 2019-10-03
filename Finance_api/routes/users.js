@@ -12,20 +12,23 @@ router.post("/register", async (req, res) => {
   // Form validation
   const { errors, isValid } = validateRegisterInput(req.body);
   // Check validation
-  if (req.body.password.trim().length < 6) {
-    req.flash('success_msg', 'Password should at least be 5 characters or more');
+  if (!isValid) {
+    if (errors.name !== undefined) req.flash('success_msg', errors.name);
+    if (errors.email !== undefined) req.flash('success_msg', errors.email);
+    if (errors.password !== undefined) req.flash('success_msg', errors.password);
+    if (errors.password2 !== undefined) req.flash('success_msg', errors.password2);
     return res.redirect('back');
-  } else {
-    let check = await User.findOne({ email: req.body.email });
-    if (check) {
-      req.flash('success_msg', 'Email already in use');
-      return res.redirect('back');
-    } else {
-      await User.create(req.body);
-      req.flash('success_msg', 'Account created successfully, you can now login');
-      return res.redirect('/');
-    }
   }
+
+  const check = await User.findOne({ email: req.body.email });
+  if (check) {
+    req.flash('success_msg', 'Email already in use');
+    return res.redirect('back');
+  }
+
+  await User.create(req.body);
+  req.flash('success_msg', 'Account created successfully, you can now login');
+  return res.redirect('/');
 });
 
 router.post("/login", async (req, res, next) => {
