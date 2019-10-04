@@ -1,0 +1,76 @@
+#solar-flex-calculator{
+
+}
+
+
+
+#solar-flex-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+#solar-buttton{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+    #solar-add-button, #solar-restart-button{
+        padding: 0px;
+        width: 200px;
+    }
+        #solar-add-button{
+            margin-right: 20%;
+        }
+            #solar-add-button #addBtn{
+                width: 100%;
+            }
+            #solar-restart-button #cancel{
+                width: 100%;
+            }
+
+
+#solar-details{
+    text-align: center;
+    margin-top: 40px;
+}
+#totalWatts{
+    text-align: center;
+}
+#totalHours{
+    text-align: center;
+}
+#calculate-btn{
+    display: flex;
+    justify-content: center;
+}
+
+
+#how-it-works{
+    text-align: center;
+}
+
+@media (max-width: 650px){
+    #solar-header-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #solar-header-item-1{
+    }    
+    #solar-header-item-2 {
+        
+        margin-right: 20px;
+    }
+
+    #solar-button{
+        flex-direction: column;
+    }
+    #solar-add-button, #solar-restart-button{
+        width: 100%;
+    }
+}
