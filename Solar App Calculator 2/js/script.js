@@ -30,7 +30,6 @@ const loadApplianceList = () => {
 };
 loadApplianceList();
 
-
 //arrays to be used
 const namesArray = [];
 const wattQtyArray = [];
@@ -61,6 +60,8 @@ function totalPower(array) { //calculate sum of hours
 }, 0);
 };//end of total power
 
+
+
 function calcTotalPower(watts, timeInHours){
     return ((watts / 1000) * timeInHours);
 };//end of calculate total power
@@ -79,6 +80,11 @@ const addListItems = (nameOfDevice, wattsOfDevice, hoursInUse, sumOfHours, sumOf
     
     hourSpan.textContent = sumOfHours+'hours';
     wattSpan.textContent = sumOfWatts+'watts';
+    deviceName.value = '';
+    hoursUsed.value = '';
+    wattsInput.value = '';
+
+
 
     deleteBtn.innerHTML = `<i style = "cursor: pointer; color: red;"><small>DELETE</small></i>`;
     li.appendChild(deleteBtn);
@@ -124,17 +130,33 @@ const collectAndProcessValues = e => {
   };
 };
   const showPowerRecommendation = (power) =>{
-  result.textContent =`Total solar power required is ${power}kwh.`;
+    let threshold;
+    let panelRec;
+  if (power <= 5 ) {
+    threshold = 254;
+  }else if(power <= 10){
+    threshold = 254*2;
+  }else if(power <= 15){
+    threshold = 254*3;
+  }else if(power <= 20){
+    threshold = 254*4;
+  }else if(power <= 25){
+    threshold = 254*5;
+  }else if(power <= 30){
+  threshold= 254*6
+  }else{
+    threshold = 'more than 1000'
+  }
+  result.textContent =`Total solar power required is ${power}kwh.
+  You need ${threshold}-square-feet of solar panels to effectively power your home. `;
+
     };
 
     function displayRecommendation(e){
         e.preventDefault();
-        if (wattsInput.value === '' || hoursUsed.value === '' || deviceName.value === '') {
-            alert('Fields cannot be empty!');
-          } else {
-        result.classList.add('show-results');
+        
+        result.classList.add('show-results')
           }
-    }
 
 addBtn.addEventListener('click', collectAndProcessValues);
  calc.addEventListener('click', displayRecommendation);
