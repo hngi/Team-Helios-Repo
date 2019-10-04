@@ -9,69 +9,36 @@ h1 {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-  /*button styling for the different question field*/
-  .accordion {
-    background-color:green;
-    color: white;
+
+.collapsible {
+    background-color: white;
+    color: black;
     cursor: pointer;
     padding: 18px;
-    border: 12px;
-    border-style:solid, 1px, green;
-    border-radius: 8px;
+    width: 100%;
+    border: 2px solid lightgreen;
     text-align: left;
     outline: none;
     font-size: 15px;
-    transition: 0.4s;
-    width: 500px;
-    font-family: 'Josefin Sans', sans-serif;
-  }
-  
-  /*button hover styling*/
-  .active, .accordion:hover {
-    background-color: rgb(2, 75, 2); 
-  }
-  
-  /*styling of the button container*/
-  .container {
-      text-align: center;
-      width: 500px;
-  }
-  
-  hr {
-    width: 300px;
-    color: green;
-  }
-  
-  /*hidden text field content area styling*/
-  .panel {
-    padding: 0 18px;
-    width: 400px;
-    display: none;
-    background-color: white;
-    overflow: auto;
-  }
-  
-  .accordion:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
-    font-size: 13px;
-    color: white;
-    float: right;
-    margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-  }
-  
-  p{
-    color: rgb(10, 10, 10);
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    font-family: 'Josefin Sans', sans-serif;
-  }
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
 
-/*.faq {
+.collapsible:hover {
+    font-weight: bold;
+    color: white;
+    background-color: green;
+    opacity: 0.5;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  /*background-color: lightgreen;*/
+}
+
+.faq {
   width: 40%;  
   margin: 40px auto;
 }
@@ -79,7 +46,7 @@ h1 {
 .button,
 .content p {
     font-family: 'Josefin Sans', sans-serif;
-}*/
+}
 
 .contact-text p {
     text-align: center;
