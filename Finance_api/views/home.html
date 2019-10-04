@@ -8,126 +8,121 @@
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 
     <title>Helios Financial App Tracker</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <!-- <link rel='stylesheet' type='text/css' href='/css/responsive.css'> -->
     <link rel='stylesheet' type='text/css' href='/css/style.css'>
-    <style>
-    body{
-        font-family: 'Roboto', sans-serif !important;
-    }
-    .form-control {
-	height: 50px;
-	line-height: 50px;
-	padding: 15px;
-	background: none;
-	border-top: 0;
-	border-left: 0;
-	border-radius: 0;
-	border-right: 0;
-	font-size: 0.875rem;
-	background: #fff;
-	border-radius: 3px;
-	border: 1px solid #dee2e6 !important;
-}
-.form-control:focus {
-	color: #5f656b;
-	background: none;
-	outline: 0;
-	box-shadow: none;
-}
-.small-box {
-        border-radius: 2px;
-        position: relative;
-        display: block;
-        margin-bottom: 20px;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    }
+    <link rel='stylesheet' type='text/css' href='/css/materialize.min.css'>
 
-    .small-box .inner {
-        position: relative;
-        color: #fff !important;
-        padding: 20px;
-    }
-
-    .small-box h3 {
-        font-size: 38px;
-        font-weight: bold;
-        margin: 0 0 10px 0;
-        white-space: nowrap;
-        padding: 0;
-        z-index: 4;
-        color: #fff;
-    }
-
-    .small-box .inner a {
-        color: #fff !important;
-    }
-
-    .small-box p {
-        z-index: 5;
-        font-size: 15px;
-    }
-
-    .bg-purple {
-        background-color: #605ca8 !important;
-    }
-
-    .bg-success {
-        background-color: #19a185 !important;
-    }
-
-    .bg-danger {
-        background-color: #DE524A !important;
-    }
-
-    .bg-warning {
-        background-color: #f1b740 !important;
-    }
-    </style>
 </head>
 <body>
-<div class="overlay">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-       <div class="container">
-         <a class="navbar-brand" href="/">Helios Finance Tracker</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="/about">About Us</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/faq">FAQ</a>
-      </li>
-      <% if(user) { %>
-            <li class="nav-item active">
-        <a class="nav-link" href="/log-out">Log out</a>
-      </li>
-      <% } %>
-    </ul>
-  </div>
-       </div>
-    </nav>
+        <div class="navbar-fixed">
+                <nav class="teal darken-1">
+                    <div class="container">
+                        <div class="nav-wrapper">
+                            <a href="/" class="brand-logo">Hi-Tracker</a>
+                            <a href="#" data-activates="mobile-nav" class="button-collapse">
+                                <i class="fas fa-hamburger"></i>
+                            </a>
+                            <ul class="right hide-on-med-and-down">
+                                
+                                <li>
+                                    <a href="/faq">FAQ</a>
+                                </li>
+                                <li>
+                                     <a href="#" data-activates="side-nav" class="button-collapse show-on-large right">
+                                        <i class="fas fa-user-circle fa-2x "></i>
+                                    </a>
+                                </li>
+
+                                <% if(user) { %>
+                                <li class=" active">
+                                    <a href="/log-out">Log out</a>
+                                </li>
+                                <% } %>
+
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </nav>
+            </div>
+            <ul class="side-nav" id="mobile-nav">
+                    <div class="user-view">
+                            <div class="background">
+                              <img id="user-background" src="img/ocean.jpg" class="responsive-img">
+                            </div>
+                            <a href="#!">
+                              <img id="user-avatar" src="img/person1.jpg" alt="" class="circle">
+                            </a>
+                            <a href="#!">
+                                
+                              <span id="username" class="name white-text">Name: <%= user.name %></span>
+                            </a>
+                            <a href="#!">
+                               
+                              <span id="user-email" class="email white-text">Email: <%= user.email %></span>
+                            </a>
+                          </div>
+                <li>
+                    <a href="/faq">FAQ</a>
+                </li>
+               
+                <% if(user) { %>
+                <li class=" active">
+                    <a href="/log-out">Log out</a>
+                </li>
+                <% } %>
+            </ul>
+            <ul class="side-nav" id="side-nav">
+                    <div class="user-view">
+                            <div class="background">
+                              <img id="user-background" src="img/ocean.jpg" class="responsive-img">
+                            </div>
+                            <a href="#!">
+                              <img id="user-avatar" src="img/person1.jpg" alt="" class="circle">
+                            </a>
+                            <a href="#!">
+                                
+                              <span id="username" class="name white-text">Name: <%= user.name %></span>
+                            </a>
+                            <a href="#!">
+                               
+                              <span id="user-email" class="email white-text">Email: <%= user.email %></span>
+                            </a>
+                          </div>
+                <li>
+                    <a href="/faq">FAQ</a>
+                </li>
+               
+                <% if(user) { %>
+                <li class=" active">
+                    <a href="/log-out">Log out</a>
+                </li>
+                <% } %>
+            </ul>
+            <!--END OF NAVBAR-->
             
-            <div class="container app-container mt-5">
+            <section class="container section app-container mt-5">
+                    <div class="center">
+
+                            <h5 class="center teal-text text-darken-2">Quick Summary</h5>
+                        </div>
                     <div class="row mb-3 text-white">
+                        
                             <!-- Top Report Start -->
-                            <div class="col-lg-3 col-md-6  col-12 mb-30">
-                    
+                            <div class="col s12 m3">
                                 <div class="small-box bg-success shadow-sm">
                                     <div class="inner">
-                                        Total Amount Spent: ₦<%= tota == "" ? '0':  tota[0].amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') %>
+                                        Total Expenses: ₦<%= tota == "" ? '0':  tota[0].amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') %>
                                     </div>
                                 </div>
                             </div>
                             <!-- Top Report End -->
                             <!-- Top Report Start -->
-                            <div class="col-lg-3 col-md-6  col-12 mb-30">
+                            <div class="col s12 m3">
                     
                                 <div class="small-box bg-danger shadow-sm">
                                     <div class="inner">
@@ -139,7 +134,7 @@
                             <!-- Top Report End -->
 
                             <!-- Top Report Start -->
-                            <div class="col-lg-3 col-md-6  col-12 mb-30">
+                            <div class="col s12 m3">
                     
                                 <div class="small-box bg-purple shadow-sm">
                                     <div class="inner">
@@ -151,7 +146,7 @@
                             <!-- Top Report End -->
 
                             <!-- Top Report Start -->
-                            <div class="col-lg-3 col-md-6  col-12 mb-30">
+                            <div class="col s12 m3">
                     
                                 <div class="small-box bg-warning shadow-sm">
                                     <div class="inner">
@@ -183,9 +178,11 @@
                                         <% if(userExpenses == "") { %>
                                         <div class="alert alert-primary">No Record for now</div>
                                         <% } %>
-                                        <table class="table table-vertical-middle">
-                                            <thead>
+                                        <table class="table bordered responsive-table highlight">
+                                            <h5 class="center">Expenses Table</h5>
+                                            <thead class="grey lighten-5">
                                                 <tr>
+                                                    <div class="divider"></div>
                                                     <th>Items</th>
                                                     <th>Description</th>
                                                     <th>Amount</th>
@@ -196,37 +193,35 @@
                                             <tbody>
                                                 <% for(var item of userExpenses) { %>
                                                 <tr>
-                                                        <!-- <form action="/expenses/delete" method="POST" class="mt-3"> -->
                                                     <td><%= item.items %></td>
                                                     <td><%= item.description %></td>
                                                     <td>₦<%= item.amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,') %></td>
                                                     <td><%= item.user.email %></td>
-                                                    <td><%= item.createdAt.toDateString() %></td> 
-                                                    <td> <a href = "/expenses/delete/<%= item._id %>" class="btn btn-primary btn-lg" >Delete</a></td>
-                                                <!-- </form> -->
+                                                    <td><%= item.createdAt.toDateString() %></td>
                                                 </tr>
-                                                   
-                                                <% } %>                                               
+                                                <% } %>
                                             </tbody>
                                         </table>
                                     </div>
                             </div>
+                            <div class="divider"></div>
                     </div>
-                        <form action="/expenses/create" method="POST" class="mt-3">
-                            <div class="form-group">
-                                <input type="text" name="items" placeholder="Item" class="form-control" required>
+                        <form action="/expenses/create" method="POST" style="padding: 0 10px;" class="grey lighten-5">
+                            <h5 class="center">Add Item</h5>
+                            <div class="input-field">
+                                <input type="text" name="items" id="items" required>
+                                <label for="items">Item</label>
                             </div>
-                            <div class="form-group">
-                                <input type="number" name="amount" placeholder="Amount" class="form-control" required>
+                            <div class="input-field">
+                                <input type="number" name="amount" id="amount" required>
+                                <label for="amount">Amount</label>
                             </div>
-                            <div class="form-group">
-                                <input type="date" name="purchase-date" class="form-control form-control-sm" />
+                            <div class="input-field">
+                                <textarea name="description" id="description" class="materialize-textarea" required></textarea>
+                                <label for="description">Description</label>
                             </div>
-                            <div class="form-group">
-                                <textarea name="description" id="" cols="30" rows="5" class="form-control" placeholder="Description" required></textarea>
-                            </div>
-                            <div class="form-group">
-                                <button class="btn btn-primary">Submit</button>
+                            <div class="input-field center">
+                                <button type="submit" class="btn">Submit</button>
                             </div>
                         </form>
                 <!-- <form name="cart">
@@ -279,11 +274,39 @@
                         </tbody>
                     </table>
                 </form> -->
-            </div>
-        </div>
-        
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            </section>
+        <footer class="section teal darken-2 white-text center">
+                <p class="flow-text">Team Helios &copy; 2019</p>
+            </footer>
     </body>
+    <script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        // Init Side nav
+        $('.button-collapse').sideNav();
+
+        // Init Slider
+        $('.slider').slider({
+            indicators: false,
+            height: 500,
+            transition: 500,
+            interval: 4000
+        });
+        // Init Scrollspy
+        $('.scrollspy').scrollSpy();
+
+       const userIcon = document.querySelector('#user-icon');
+       userIcon.addEventListener('click', ()=>{
+           console.log('ive been clicled');
+       })
+
+    });
+</script>
 </html>

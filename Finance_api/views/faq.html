@@ -1,124 +1,178 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="vieweport" content="width=device-width, initial-scale=1.0 shrink-to-fit=yes">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel="icon" href="/img/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <title>FAQs</title>
-    <link rel='stylesheet' type='text/css' href='/css/style.css'>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/FAQs.css" />
-    <link rel='stylesheet' type='text/css' href='/css/responsive.css'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Helios Financial App Tracker</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel='stylesheet' type='text/css' href='/css/materialize.min.css'>
 </head>
 
-<body>
-    <div class="finance">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+<body id="home" class="scrollspy">
+    <div class="navbar-fixed">
+        <nav class="teal darken-1">
             <div class="container">
-              <a class="navbar-brand" href="/">Helios Finance Tracker</a>
-             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-       </button>
-       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-         <ul class="navbar-nav ml-auto">
-           <li class="nav-item active">
-             <a class="nav-link" href="/about">About Us</a>
-           </li>
-           <li class="nav-item active">
-             <a class="nav-link" href="/faq">FAQ</a>
-           </li>
-           <% if(user) { %>
-                 <li class="nav-item active">
-             <a class="nav-link" href="/log-out">Log out</a>
-           </li>
-           <% } %>
-         </ul>
-       </div>
+                <div class="nav-wrapper">
+                    <a href="/home" class="brand-logo">Hi-Tracker</a>
+                    <a href="#" data-activates="mobile-nav" class="button-collapse">
+                        <i class="fas fa-hamburger"></i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="/home">Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="faq.html">FAQ</a>
+                        </li>
+                       
+                        <% if(user) { %>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/log-out">Log out</a>
+                        </li>
+                        <% } %>
+                    </ul>
+                </div>
             </div>
-         </nav>
-        
-        <h1>Frequently Asked Questions</h1>
-        
-        <div class="faq">
-            <button type="button" class="collapsible">What is Finance Tracker?</button>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            
-            <button type="button" class="collapsible">How do I signup?</button>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <button type="button" class="collapsible">How does it work?</button>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            
-            <button type="button" class="collapsible">Can I reset my password?</button>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            
-            <button type="button" class="collapsible">How do I print my Finance summary?</button>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            
-            <button type="button" class="collapsible">How to deactivate my account?</button>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-        </div>
-        
-        <div class="contact-text">
-            <p>Still got some questions?</p>
-            <p>Send us a mail - <a href="#">teamhelios@gmail.com</a></p>
-            <br>
-            <p>Or drop a message</p>
-        </div>
-        
-        <form id="myform" action="" method="POST">
-        <div class="contact-area">
-            <input type="text" placeholder="Name" pattern="[A-Za-z]" required/>
-            <input type="email" placeholder="Email" pattern="[a-Z0-9._%+-]+@[a-z0.9.-]+\.[a-z]{2,}$"  required/>
-            <textarea rows="5" placeholder="Message"></textarea>
-            <button class="sub-btn" onclick="myFunction()">Submit</button>
-        </div>
-      </form>
+        </nav>
     </div>
+    <ul class="side-nav" id="mobile-nav">
+        <li>
+            <a href="/home">Home</a>
+        </li>
+        <li class="active">
+            <a href="#faq">FAQ</a>
+        </li>
+      
+        <% if(user) { %>
+        <li class="nav-item red lighten-5">
+            <a class="nav-link" href="/log-out">Log out</a>
+        </li>
+        <% } %>
+    </ul>
+    <!--END OF NAVBAR-->
+    <main class="container">
+        <section class="section faqs">
+          <h4>Frequently Asked Questions</h4>
+              <ul class="collapsible" data-collapsible="accordion">
+                  <li>
+                    <div class="collapsible-header active waves-effect waves-teal">
+                      <i class="fas fa-question-circle"></i>
+                      What is Finance Tracker?
+                    </div>
+                    <div class="collapsible-body">
+                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sequi quasi, cumque accusamus ipsa corrupti architecto. Quas necessitatibus adipisci, maxime dignissimos similique fugit aspernatur, iste earum non facere, itaque temporibus.</span>
+                    </div>
+                  </li>
+                  <li>
+                     <div class="collapsible-header waves-effect waves-teal">
+                      <i class="fas fa-sign-in-alt"></i>
+                      How do I signup?
+                    </div>
+                    <div class="collapsible-body">
+                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tempora dolore sapiente iusto repellendus sint veniam voluptates facilis est fugit suscipit, magni aut unde nesciunt asperiores odio voluptatum ut in!</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header waves-effect waves-teal">
+                      <i class="fas fa-info"></i>
+                      How does it work?
+                    </div>
+                    <div class="collapsible-body waves-effect waves-teal">
+                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem officia consequuntur modi suscipit laboriosam, qui repudiandae, libero ea veritatis, ex molestiae! Numquam dolorum, corrupti necessitatibus earum adipisci commodi expedita.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header waves-effect waves-teal">
+                      <i class="fas fa-info"></i>
+                      Can I reset my password?
+                    </div>
+                    <div class="collapsible-body">
+                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem officia consequuntur modi suscipit laboriosam, qui repudiandae, libero ea veritatis, ex molestiae! Numquam dolorum, corrupti necessitatibus earum adipisci commodi expedita.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header waves-effect waves-teal">
+                      <i class="fas fa-info"></i>
+                      How do I print my Finance summary?
+                    </div>
+                    <div class="collapsible-body">
+                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem officia consequuntur modi suscipit laboriosam, qui repudiandae, libero ea veritatis, ex molestiae! Numquam dolorum, corrupti necessitatibus earum adipisci commodi expedita.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="collapsible-header waves-effect waves-teal">
+                      <i class="fas fa-info"></i>
+                      How to deactivate my account?
+                    </div>
+                    <div class="collapsible-body">
+                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatem officia consequuntur modi suscipit laboriosam, qui repudiandae, libero ea veritatis, ex molestiae! Numquam dolorum, corrupti necessitatibus earum adipisci commodi expedita.</span>
+                    </div>
+                  </li>
+                </ul>
+      </section>
+      
+      <section class="section contact center">
+        <div class="container">
+          <div class="row">
+            <div class="col s12 m6">
+              <p class="flow-text">Still got some questions?</p>
+              <p>Send us a mail - <a href="#!">teamhelios@gmail.com</a></p>
+              <p>You can also leave us a message using the feedback form:</p>
 
-    <script>
-      function myFunction() {
-        document.getElementById("myForm").submit();
-      }
-      </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="js/FAQs.js"></script>
+            </div>
+            <div class="col s12 m6 offset-l1">
+              <form action="#!" method="POST">
+                <h5>Feedback Form</h5>
+                  <input type="text" placeholder="Name" />
+                  <input type="email" placeholder="Email" />
+                  <textarea class="materialize-textarea" placeholder="Message"></textarea>
+                  <button type="submit" class="btn waves-effect waves-light">Submit</button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      </main>
+
+   
+
+    <footer class="section teal darken-2 white-text center">
+        <p class="flow-text">Team Helios &copy; 2019</p>
+    </footer>
 </body>
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        // Init Side nav
+        $('.button-collapse').sideNav();
+
+        // Init Slider
+        // $('.slider').slider({
+        //     indicators: false,
+        //     height: 500,
+        //     transition: 500,
+        //     interval: 4000
+        // });
+        // Init Scrollspy
+        $('.scrollspy').scrollSpy();
+
+    });
+</script>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
