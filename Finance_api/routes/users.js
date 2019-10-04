@@ -45,4 +45,11 @@ router.post("/login", async (req, res, next) => {
   })(req, res, next);
 });
 
+// Facebook Login auth
+router.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email'] }));
+router.get('/auth/facebook/callback', passport.authenticate('facebook', {
+    failureRedirect: '/',
+    successRedirect: '/home'
+}));
+
 module.exports = router;

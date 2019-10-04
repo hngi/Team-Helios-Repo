@@ -95,7 +95,7 @@ function () {
   };
 }()); // Delete an expense
 
-router.post('/expenses/delete',
+router.get('/expenses/delete/:expenseId',
 /*#__PURE__*/
 function () {
   var _ref3 = (0, _asyncToGenerator2["default"])(
@@ -107,7 +107,7 @@ function () {
           case 0:
             _context3.next = 2;
             return _expenses["default"].deleteOne({
-              _id: req.body.expenseId
+              _id: req.params.expenseId
             });
 
           case 2:

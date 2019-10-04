@@ -118,6 +118,14 @@ function () {
   return function (_x3, _x4, _x5) {
     return _ref2.apply(this, arguments);
   };
-}());
+}()); // Facebook Login auth
+
+router.get('/auth/facebook', passport.authenticate('facebook', {
+  scope: ['email']
+}));
+router.get('/auth/facebook/callback', passport.authenticate('facebook', {
+  failureRedirect: '/',
+  successRedirect: '/home'
+}));
 module.exports = router;
 //# sourceMappingURL=users.js.map
