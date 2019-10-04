@@ -30,8 +30,8 @@ router.post('/expenses/edit', async (req, res, next) => {
 });
 
 // Delete an expense
-router.post('/expenses/delete', async (req, res, next) => {
-    await Expenses.deleteOne({_id: req.body.expenseId});
+router.get('/expenses/delete/:expenseId', async (req, res, next) => {
+    await Expenses.deleteOne({_id: req.params.expenseId});
     req.flash('success_msg', 'Expense has been deleted successfully');
     return res.redirect('back');
 });
