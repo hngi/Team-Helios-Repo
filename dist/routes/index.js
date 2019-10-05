@@ -33,9 +33,9 @@ function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            res.locals.success_msg = req.flash("success_msg");
-            res.locals.error_msg = req.flash("error_msg");
-            res.locals.error = req.flash("error");
+            res.locals.success_msg = req.flash('success_msg');
+            res.locals.error_msg = req.flash('error_msg');
+            res.locals.error = req.flash('error');
             res.locals.user = req.user || null;
 
             if (!(typeof req.user == 'undefined')) {
@@ -78,9 +78,9 @@ function () {
               }
             }, {
               $group: {
-                '_id': null,
-                'amount': {
-                  "$sum": "$amount"
+                _id: null,
+                amount: {
+                  $sum: '$amount'
                 }
               }
             }]);
@@ -109,9 +109,9 @@ function () {
               }
             }, {
               $group: {
-                '_id': null,
-                'amount': {
-                  $sum: "$amount"
+                _id: null,
+                amount: {
+                  $sum: '$amount'
                 }
               }
             }]);
@@ -140,9 +140,9 @@ function () {
               }
             }, {
               $group: {
-                '_id': null,
-                'amount': {
-                  $sum: "$amount"
+                _id: null,
+                amount: {
+                  $sum: '$amount'
                 }
               }
             }]);
@@ -171,9 +171,9 @@ function () {
               }
             }, {
               $group: {
-                '_id': null,
-                'amount': {
-                  $sum: "$amount"
+                _id: null,
+                amount: {
+                  $sum: '$amount'
                 }
               }
             }]);
@@ -224,6 +224,9 @@ router.get('/home', _auth["default"], function (req, res, next) {
 });
 router.get('/about', function (req, res, next) {
   res.render('about');
+});
+router.get('/contact', function (req, res, next) {
+  res.render('contact');
 });
 router.get('/log-out', function (req, res, next) {
   req.logout();
