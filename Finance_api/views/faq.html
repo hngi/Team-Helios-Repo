@@ -8,10 +8,14 @@
     <link href="https://fonts.googleapis.com/css?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fugaz+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
     <title>FAQs</title>
     <link rel='stylesheet' type='text/css' href='/css/style.css'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/FAQs.css" />
+    <link rel="stylesheet" href="faq.css" />
     <link rel='stylesheet' type='text/css' href='/css/responsive.css'>
 </head>
 
@@ -25,61 +29,73 @@
        </button>
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/home">Home</a>
-            </li>
            <li class="nav-item active">
              <a class="nav-link" href="/about">About Us</a>
            </li>
            <li class="nav-item active">
-            <a class="nav-link" href="/contact">Contact Us</a>
-          </li>
-           <li class="nav-item active">
              <a class="nav-link" href="/faq">FAQ</a>
            </li>
-           <% if(user) { %>
+           
                  <li class="nav-item active">
              <a class="nav-link" href="/log-out">Log out</a>
            </li>
-           <% } %>
+          
          </ul>
        </div>
             </div>
          </nav>
         
-        <h1>Frequently Asked Questions</h1>
-        
-        <div class="faq">
-            <button type="button" class="collapsible">What is Finance Tracker?</button>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            
-            <button type="button" class="collapsible">How do I signup?</button>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <button type="button" class="collapsible">How does it work?</button>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            
-            <button type="button" class="collapsible">Can I reset my password?</button>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            
-            <button type="button" class="collapsible">How do I print my Finance summary?</button>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            
-            <button type="button" class="collapsible">How to deactivate my account?</button>
-            <div class="content">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-        </div>
-        
+         <section>
+          <div class="container">
+          <h1>Frequently Asked Questions</h1>
+          <hr>
+          
+        <!--buttons displaying questions and answer panels-->
+          <button class="accordion">What is Finance Tracker?</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <br>
+          <br>
+          
+          <button class="accordion">How do I Sign Up?</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <br>
+          <br>
+          
+          <button class="accordion">How does it Work?</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <br>
+          <br>
+          
+          <button class="accordion">Can I reset my Password?</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <br>
+          <br>
+          
+          <button class="accordion">How do I print my financial summary?</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <br>
+          <br>
+          
+          <button class="accordion">How can I deactivate my account?</button>
+          <div class="panel">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          
+          
+          </div>
+          </section>
+
+        <!--contact text-->
         <div class="contact-text">
             <p>Still got some questions?</p>
             <p>Send us a mail - <a href="#">teamhelios@gmail.com</a></p>
@@ -87,16 +103,37 @@
             <p>Or drop a message</p>
         </div>
         
+        <!--faq page form-->
         <form id="myform" action="" method="POST">
-        <div class="contact-area">
-            <input type="text" placeholder="Name" pattern="[A-Za-z]" required/>
-            <input type="email" placeholder="Email" pattern="[a-Z0-9._%+-]+@[a-z0.9.-]+\.[a-z]{2,}$"  required/>
-            <textarea rows="5" placeholder="Message"></textarea>
-            <button class="sub-btn" onclick="myFunction()">Submit</button>
-        </div>
-      </form>
-    </div>
+          <div class="contact-area">
+              <input type="text" id="name" name="Name" placeholder="Enter your name" required/>
+              <input type="email" placeholder="Enter your email" pattern="[a-Z0-9._%+-]+@[a-z0.9.-]+\.[a-z]{2,}$"  required/>
+              <input type="text" id="subject" name="Subject" pattern="[A-Za-z]" required/>
+              <textarea rows="5" placeholder="Message"></textarea>
+              <button class="sub-btn" onclick="myFunction()">Submit</button>
+          </div>
+        </form>
+      </div>
+  
+      <!--accordion display script-->
+      <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+      </script>
 
+    <!--form submission script-->
     <script>
       function myFunction() {
         document.getElementById("myForm").submit();
