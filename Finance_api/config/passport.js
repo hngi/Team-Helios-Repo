@@ -1,6 +1,6 @@
 import passport from 'passport';
 const LocalStrategy = require('passport-local').Strategy;
-const FacebookStrategy = require('passport-facebook'). Strategy;
+const GoogleStrategy = require('passport-google-oauth20'). Strategy;
 import User from '../models/users';
 
 //Serialize user
@@ -29,33 +29,37 @@ passport.use(new LocalStrategy({
   })
 }))
 
-passport.use(new FacebookStrategy({
-  clientID: "484024792328223",
-  clientSecret: "49a6b7fc5c4325791695fa7e81dc7986",
-  callbackURL: "/auth/facebook/callback",
-  profileFields: ['id', 'displayName', 'photos', 'email'],
-}, function (accessToken, refreshToken, profile, done) {
-  process.nextTick(() => {
-      User.findOne({ email: profile.emails[0].value }, (err, user) => {
-          if (err)
-              return done(err);
-          if (user)
-              return done(null, user);
-          else {
-              let payload = {
-                  email: profile.emails[0].value,
-                  name: profile.displayName.split(" ").join('-').toLowerCase(),
-              };
-              let newUser = new User(payload);
-              newUser.save((err, user) => {
-                  if (err)
-                      throw err;
-                  return done(null, newUser);
-              })
-          }
-      });
-  });
-}
-));
+passport.use(new GoogleStrategy({
+    clientID: "1039166944193-st34fsrpgqd02eocno2ouog9teutr1rf.apps.googleusercontent.com",
+    clientSecret: "V0ElXoVRVA5-5ktT8MaiZe5y",
+    callbackURL: "/auth/google/callback",
+  }, function (accessToken, refreshToken, profile, done) {
+    process.nextTick(() => {
+        User.findOne({ email: profile.emails[0].value }, (err, user) => {
+            if (err)
+                return done(err);
+            if (user)
+                return done(null, user);
+            else {
+                console.log(profile)
+                let payload = {
+                    email: profile.emails[0].value,
+                    name: profile.displayName.split(" ").join('-').toLowerCase(),
+                    profilePicture: profile.photos[0].value,
+                    active: true,
+                    provider:profile.provider,
+                    googleId: profile.id
+                };
+                let newUser = new User(payload);
+                newUser.save((err, user) => {
+                    if (err)
+                        throw err;
+                    return done(null, newUser);
+                })
+            }
+        });
+    });
+  }
+  ));
 
 module.exports = passport;

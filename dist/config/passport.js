@@ -8,7 +8,7 @@ var _users = _interopRequireDefault(require("../models/users"));
 
 var LocalStrategy = require('passport-local').Strategy;
 
-var FacebookStrategy = require('passport-facebook').Strategy;
+var GoogleStrategy = require('passport-google-oauth20').Strategy;
 
 //Serialize user
 _passport["default"].serializeUser(function (user, done) {
@@ -46,11 +46,10 @@ _passport["default"].use(new LocalStrategy({
   });
 }));
 
-_passport["default"].use(new FacebookStrategy({
-  clientID: "484024792328223",
-  clientSecret: "49a6b7fc5c4325791695fa7e81dc7986",
-  callbackURL: "/auth/facebook/callback",
-  profileFields: ['id', 'displayName', 'photos', 'email']
+_passport["default"].use(new GoogleStrategy({
+  clientID: "1039166944193-st34fsrpgqd02eocno2ouog9teutr1rf.apps.googleusercontent.com",
+  clientSecret: "V0ElXoVRVA5-5ktT8MaiZe5y",
+  callbackURL: "/auth/google/callback"
 }, function (accessToken, refreshToken, profile, done) {
   process.nextTick(function () {
     _users["default"].findOne({
@@ -58,9 +57,14 @@ _passport["default"].use(new FacebookStrategy({
     }, function (err, user) {
       if (err) return done(err);
       if (user) return done(null, user);else {
+        console.log(profile);
         var payload = {
           email: profile.emails[0].value,
-          name: profile.displayName.split(" ").join('-').toLowerCase()
+          name: profile.displayName.split(" ").join('-').toLowerCase(),
+          profilePicture: profile.photos[0].value,
+          active: true,
+          provider: profile.provider,
+          googleId: profile.id
         };
         var newUser = new _users["default"](payload);
         newUser.save(function (err, user) {
