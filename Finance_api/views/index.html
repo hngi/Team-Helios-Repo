@@ -110,12 +110,12 @@ p.separator {
   background: url(/img/money.png);
   /* background-repeat: no-repeat; */
   }
-  .btn-social-facebook {
-        background-color: #4267b2;
+  .btn-social-google {
+        background-color: rgb(223, 63, 63) ;
         transition: ease-in-out 0.5s;
     }
-    .btn-social-facebook:hover {
-        background-color: #3459a3;
+    .btn-social-google:hover {
+        background-color: rgb(223, 63, 63);
     }
     .btn-social {
         width: 100%;
@@ -160,14 +160,8 @@ p.separator {
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-         <a class="nav-link" href="/home">Home</a>
-        </li>
       <li class="nav-item active">
         <a class="nav-link" href="/about">About Us</a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="/contact">Contact Us</a>
       </li>
       <li class="nav-item active">
         <a class="nav-link" href="/faq">FAQ</a>
@@ -232,7 +226,7 @@ p.separator {
                                     <%= error %>
                                 </div>
                                 <% } %>
-						
+                                <p class="separator social-register-group text-center"><span><b> Login </b></span></p>
 						<div class="form-group">
 							<input
 								type="email"
@@ -258,8 +252,8 @@ p.separator {
                         </div>
                         <p class="separator social-register-group text-center"><span><b>OR</b></span></p>
                         <div class="form-group shadow-sm">
-                            <a href="/auth/facebook" class="btn-social btn-social-modal btn-social-facebook">
-                                <i class="fa fa-facebook"></i>Connect with Facebook</a
+                            <a href="/auth/google" class="btn-social btn-social-modal btn-social-google">
+                                <i class="fa fa-google-plus-square"></i>Connect with Google</a
                             >
                         </div>
 						<div class="form-group">
