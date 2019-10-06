@@ -1,0 +1,104 @@
+@media (max-width: 588px) {
+  .fixed-top {
+    position: fixed;
+  }
+  .header .home {
+    margin-left: 10px;
+  }
+  .banner-container {
+    margin-top: 96px;
+  }
+  .banner-text {
+    top: 40%;
+  }
+  .banner-text h2,
+  .banner-text h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .banner-text P {
+    font-size: 15px;
+  }
+  .banner-text hr {
+    width: 25%;
+    border: 2px solid #d5d80a;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .guide-container {
+    padding: 50px;
+    margin-top: 10px;
+  }
+  #
+}
+
+@media (min-width: 1000px) {
+  .header .home {
+    margin-left: 100px;
+  }
+  .header .home2 {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .guide-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 100px 50px;
+  }
+  .guide-container .guide-text {
+    width: 100%;
+  }
+  .guide-container .guide-img {
+    width: 100%;
+  }
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer h2,
+  .footer h6 {
+    text-align: center;
+  }
+  .footer .helios {
+    width: 100%;
+  }
+  .footer .social {
+    width: 100%;
+  }
+  .footer .social p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 588px) and (max-width: 700px) {
+  .banner-container {
+    margin-top: 50px;
+  }
+  .banner-text {
+    top: 37%;
+  }
+  .banner-text h2,
+  .banner-text h3 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .banner-text P {
+    font-size: 15px;
+  }
+  .banner-text hr {
+    width: 25%;
+    border: 2px solid #d5d80a;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
