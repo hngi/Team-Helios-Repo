@@ -2,6 +2,53 @@ const startApp = ((e)=>{
 //grab all elements
 const deviceName = document.querySelector("#title");//from device name field
 const wattsInput = document.querySelector("#input");//from wwatts field
+
+deviceName.addEventListener('input', ()=>{
+  switch (deviceName.value) {
+    case 'Television':
+      wattsInput.value = 250;
+      break;
+    case 'Electric Iron':
+      wattsInput.value = 350;
+      break;
+    case 'Microwave':
+      wattsInput.value = 370;
+      break;
+    case 'Electric Kettle':
+      wattsInput.value = 300;
+      break;
+    case 'Deep Freezer':
+      wattsInput.value = 370;
+      break;
+    case 'Refrigerator':
+      wattsInput.value = 380;
+      break;
+    case 'Mobile Phone Charger':
+      wattsInput.value = 10;
+      break;
+    case 'Home Theatre System':
+      wattsInput.value = 220;
+      break;
+    case 'Air Conditioner':
+      wattsInput.value = 350;
+      break;
+    case 'Standing Fan':
+      wattsInput.value = 230;
+      break;
+    case 'Ceiling Fan':
+      wattsInput.value = 240;
+      break;
+    case 'Electric Stove':
+      wattsInput.value = 350;
+      break;
+    case 'Light Bulb':
+      wattsInput.value = 150;
+      break;
+  
+    default: '';
+      break;
+  }
+})
 const hourSpan = document.querySelector(".hourSpan");
 const wattSpan = document.querySelector(".wattSpan");
 const result = document.querySelector(".result");
