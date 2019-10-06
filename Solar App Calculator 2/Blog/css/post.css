@@ -1,0 +1,32 @@
+.leftcolumn {
+    margin-top: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.leftcolumn img {
+    margin-bottom: 20px;
+}
+
+.footer {
+    margin-top: 50px;
+}
+
+.title {
+    text-align: center;
+}
+
+.p-text {
+    width: 90%;
+    margin: auto;
+}
+
+.p-img {
+    width: 100%;
+}
+
+/*@media screen and (max-width: 800px) {*/
+/*  .p-img {*/
+/*      width: 100%;*/
+/*  }*/
+/*}*/
