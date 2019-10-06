@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FAQ</title>
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	 <link rel="stylesheet" href="css/main.css">
+	 <link rel="stylesheet" type="text/css" href="css/FAQ.css">
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light fixed-top header" id="solar-header-container">
+            <a class="navbar-brand home" href="#home" id="solar-header-item-1">Helios Solar Calculator</a>
+            <ul class="nav nav-pills home2" id="solar-header-item-2">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Blog/index.html">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="FAQ.html">FAQ</a>
+                </li>
+            </ul>
+        </nav>
+    <div class="title" style="text-align: center;">
+    	<h3>FREQUENTLY ASKED QUESTIONS (FAQ)</h3>
+    </div>
+    <div class="main-part">
+    	<div  class="container">
+    		<p style="font-weight: bold;" class="p1">We do our best to answer all of the questions interested homeowners and businesses have about calculating the require amount of power for their homes. Here are some of the most frequently asked questions and the answers to them!</p>
+    		<div class="container accord-sect">
+	    		<button class="accordion">Why should I install a solar energy system on my home or business?</button>
+				<div class="panel">
+				  <p>Once you have a installed a solar system on your roof, it will continue to generate free electricity from the sun year after year. This means you can substantially reduce or even eliminate your electricity bills, giving you the peace of mind that you’re doing what you can to keep your bills as low as possible while still enjoying the benefits of all the gadgets that electricity powers.</p>
+				</div><br>
+
+				<button class="accordion">How do solar systems work?</button>
+				<div class="panel">
+				  <p>A solar panel “works by allowing photons, or particles of light, to knock electrons free from atoms, generating a flow of electricity,” according to Live Science. That's a technical way of saying that the panel's photovoltaic cells convert the energy in sunlight to electricity (specifically, direct current (DC)).</p>
+				</div><br>
+
+				<button class="accordion">Will the solar array put holes in my roof, or be too heavy?</button>
+				<div class="panel">
+				  <p>No, the solar energy is absorbed by the solar panels and converted into electricity which is stored and supplied to your home.</p>
+				</div><br>
+
+				<button class="accordion">How much roof space will I need for a solar array?</button>
+				<div class="panel">
+				  <p>Most residential solar electric systems require between 100 square feet for small "starter" systems and 1,000 square feet for larger systems. On average, the typical homeowner in the United States will need to install 28 to 34 solar panels, but again, this depends on the rating of the panels</p>
+				</div><br>
+
+				<button class="accordion">Why should I calculate the amount of my power?</button>
+				<div class="panel">
+				  <p>Calculating the amount of your power would help you in estimating the power of the solar system you need.</p>
+				</div><br>
+			</div>
+		</div>
+		<div style="padding-bottom: 20px;">
+	    	<p style="font-weight: bold;" class="p1">Are you still in need of more clarifications?</p>
+	    	<p style="font-weight: bold; color: #1A2249;" class="p1">Send us an email -  Teamhelios@gmail.com</p>
+	    	<p style="font-weight: bold;" class="p1">Or drop a message below</p>
+    	</div>
+    	<div class="container form-container">
+		  <form action="action_page.php">
+			    <input type="text" id="Name" name="Name" placeholder="Name"><br>
+			    <input type="email" id="email" name="email" placeholder="Email"><br>
+			    <textarea id="Message" name="Message" placeholder="Message" style="height:100px"></textarea><br>
+			    <div style="text-align: center;">
+			    	<input type="submit" value="Submit">
+			    </div>
+		  </form>
+		</div>
+    </div>
+</body>
+<script type="text/javascript">
+	var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
+
+window.onscroll = function() {myFunction()};
+var header = document.getElementById("navbar-example2");
+var sticky = header.offsetTop;
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+</html>
