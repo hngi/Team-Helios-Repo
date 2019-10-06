@@ -8,11 +8,25 @@
           box-shadow: 0px 0px 6px #000001;
 }
 
+.header .home {
+  margin-left: 40px;
+  font-weight: bold;
+}
+
+.header .home2 {
+  margin-right: 40px;
+  font-weight: 500;
+}
+
+.header li a {
+  color: #207dd4;
+}
+
 .banner-container {
   padding-top: 56px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 249, 252, 0.52)), to(rgba(46, 11, 173, 0.73))), url("../img/photovoltaic-2138992_1920.jpg");
   background-image: linear-gradient(to bottom, rgba(250, 249, 252, 0.52), rgba(46, 11, 173, 0.73)), url("../img/photovoltaic-2138992_1920.jpg");
-  height: 100vh;
+  height: 50vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,7 +35,7 @@
 .banner-text {
   color: white;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -38,8 +52,8 @@
 .banner-text hr {
   width: 15%;
   border: 2px solid #d5d80a;
-  margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 
 .banner-text button {
@@ -59,13 +73,14 @@
   display: -ms-flexbox;
   display: flex;
   padding: 100px;
-  margin-bottom: 50px;
 }
 
 .guide-container .guide-text {
   width: 40%;
   margin-right: 5%;
+  margin-top: 0px;
   padding: 20px;
+
 }
 
 .guide-container .guide-text hr {
@@ -88,7 +103,7 @@
   background-color: #3f3c3c;
   color: white;
   padding: 50px;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .footer .helios {
@@ -156,6 +171,7 @@
 .calculator {
   width: 80%;
   margin: auto;
+  margin-top: 50px;
 }
 
 .cal-btn {
@@ -174,5 +190,12 @@
 
 #calculate {
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#addBtn,
+#cancel,
+#calculate {
+  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */
