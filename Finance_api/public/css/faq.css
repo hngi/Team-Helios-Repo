@@ -1,0 +1,137 @@
+body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  
+  /*button styling for the different question field*/
+  .accordion {
+    background-color:green;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: 2px lightgreen;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+  
+  /*styling of the button container*/
+  .container {
+    text-align: center;
+    width: 500px;
+  }
+  
+  /*button hover styling*/
+  /*.active,*/ .accordion:hover {
+    background-color: rgb(2, 75, 2); 
+  }
+  
+  hr {
+    width: 300px;
+    color: green;
+  }
+  
+  /*hidden text field content area styling*/
+  .panel {
+    padding: 0 18px;
+    width: 400px;
+    display: none;
+    background-color: white;
+    overflow: auto;
+  }
+  
+  .accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  
+  p{
+    color: rgb(10, 10, 10);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  /*.button,
+  .content p {
+    font-family: 'Josefin Sans', sans-serif;
+  }*/
+  
+  .contact-text p {
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+  }
+  
+  .contact-area {
+   display: flex;
+   flex-direction: column;
+   width: 35%;
+   margin: 40px auto;
+  }
+  
+  .contact-area input {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 15px;
+  }
+  
+  .contact-area input:first-child {
+    margin-bottom: 10px;
+  }
+  
+  .contact-area textarea {
+    margin-top: 10px;
+    padding: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+  }
+  
+  .sub-btn {
+    margin-top: 20px;
+    border: none;
+    padding: 15px;
+    width: 27%;
+    background-color: lightgreen;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Josefin Sans', sans-serif;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
