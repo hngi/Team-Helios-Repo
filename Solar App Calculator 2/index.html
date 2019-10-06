@@ -7,14 +7,16 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/lario-fix.css">
     </head>
     
     <body>
-        <nav id="navbar-example2" class="navbar navbar-light bg-light fixed-top header">
-            <a class="navbar-brand" href="#home">Helios Solar Calculator</a>
-            <ul class="nav nav-pills">
+        <nav class="navbar navbar-light bg-light fixed-top header" id="solar-header-container">
+            <a class="navbar-brand home" href="#home" id="solar-header-item-1">Helios Solar Calculator</a>
+            <ul class="nav nav-pills home2" id="solar-header-item-2">
                 <li class="nav-item">
                     <a class="nav-link" href="#home">HOME</a>
                 </li>
@@ -24,8 +26,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#calculator">CALCULATOR</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Blog/index.html">BLOG</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="FAQ.html">FAQ</a>
+                </li>
             </ul>
-            </nav>
+        </nav>
 
         <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
             <div class="banner-container" id="home">
@@ -33,14 +41,60 @@
                     <h2>Solar Calculator</h2>
                     <h3>For Everyone</h3>
                     <hr>
-                    <p>Solar panels are perfect if you're lookin for a reliable source of additional power and energy for your home or office</p>
-                    <button>FIND OUT MORE</button>
+                    <p>Solar panels are perfect if you're looking for a reliable source of additional power and energy for your home or office</p>
                 </div>
+            </div>
+
+            <div class="calculator" id="solar-flex-calculator">
+                <h2>Calculator</h2>
+                <form >
+                    <div class="form-row" id="solar-flex-container">
+                        <div class="form-group col-md-4" id="solar-flex-item-1">
+                            <label for="title">Name of Appliance</label>
+                            <input class="form-control" type="text" id="title" list="appliances" name="ada" onfocus="this.value=">
+                            <datalist id="appliances">
+                            </datalist>
+                        </div>
+    
+                        <div class="form-group col-md-3" id="solar-flex-item-2">
+                            <label for="input">Capacity in Watts</label>
+                            <input class="form-control" id="input" type="number">
+                        </div>
+    
+                        <div class="form-group col-md-3" id="solar-flex-item-3">
+                            <label for="hours">Hours in use</label>
+                            <input class="form-control" id="hours" type="number">
+                        </div>
+                    </div>
+                </form>
+
+                <div class="cal-btn" id="solar-buttton">
+                    <div class="" id="solar-add-button">
+                        <button id="addBtn" class="btn btn-primary btn-4">ADD</button>
+                    </div>
+                    <div class="" id="solar-restart-button">
+                        <button id="cancel" class="btn btn-primary btn-4">RESTART</button>
+                    </div>
+                </div>
+                
+                <div class="list-box" id="solar-details">
+                    <h3>Device details:</h3>
+                    <ul id="list-parent-container"></ul>
+                </div>
+            
+                <div id="totalWatts">Total Wattage = <span class="wattSpan">0</span></div>
+            
+                <div id="totalHours">Total Hours = <span class="hourSpan">0</span></div>
+                <div id="calculate-btn">
+                    <button id="calculate" class="btn btn-primary btn-4">CALCULATE</button>
+                </div>
+            
+                <div class="result"></div>
             </div>
     
             <div class="guide-container" id="guide">
                 <div class="guide-text col-auto">
-                    <h2>How The Calculator Works</h2>
+                    <h2 id="how-it-works">How The Calculator Works</h2>
                     <hr>
                     <p>When you fill the calculator form by inputing the power ratings of your equipments, the system will multiply the power rating data you provided for each equipment by their respective number of working hours.</p>
                     <p>The result is summed up and depending on your location, a multiplier is applied which is a function of the possible hours of sunshine available in a day within your location.</p>
@@ -52,51 +106,6 @@
                 </div>
             </div>
         </div>
-
-        <div class="calculator" id="calculator">
-            <h2>Calculator</h2>
-            <form>
-                <div class="form-row">
-                    <div class="form-group col-md-4">
-                        <label for="title">Name of Appliance</label>
-                        <input class="form-control" type="text" id="title" list="appliances" name="ada">
-                        <datalist id="appliances">
-                        </datalist>
-                    </div>
-
-                    <div class="form-group col-md-2">
-                        <label for="input">Capacity in Watts</label>
-                        <input class="form-control" id="input" type="number">
-                    </div>
-
-                    <div class="form-group col-md-2">
-                        <label for="hours">Hours in use</label>
-                        <input class="form-control" id="hours" type="number">
-                    </div>
-                </div>
-                
-                <div class="cal-btn">
-                    <div class="col-auto">
-                        <button id="addBtn" class="btn btn-primary btn-4">Calculate</button>
-                    </div>
-                    <div class="col-auto">
-                        <button id="cancel" class="btn btn-primary btn-4">Restart</button>
-                    </div>
-                </div>
-            </form>
-            
-            <div class="list-box">
-                <h3>Device details:</h3>
-                <ul id="list-parent-container"></ul>
-            </div>
-        
-            <div id="totalWatts">Total Wattage = <span class="wattSpan">0</span></div>
-        
-            <div id="totalHours">Total Hours = <span class="hourSpan">0</span></div>
-            <button id="calculate" class="btn btn-primary btn-4">Restart</button>
-        
-            <div class="result"></div>
-        </div>
         
         <footer class="footer">
             
@@ -104,7 +113,7 @@
                 <h2>Helios</h2>
                 <h6>Solar Calculator</h6>
                 <br>
-                <p>With our solar calculator you can know the amount of power needed to run your home or office</p>
+                <p>Helios Solar Calculator let you know how much power you need for your home or office.</p>
             </div>
             
             <div class="social col-auto">
