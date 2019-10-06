@@ -1,0 +1,142 @@
+.navbar {
+	background: transparent;
+}
+body {
+	background: #E5E5E5;
+}
+.header {
+	-webkit-box-shadow: 0px 0px 6px #000001;
+	box-shadow: 0px 0px 6px #000001;
+}
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.bg-light {
+    background-color: #f8f9fa!important;
+}
+nav{
+	font-size: 16px;
+}
+
+.navbar {
+	font-weight: 600;
+	background: transparent;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+}
+.nav-item a:hover {
+	background-color: transparent !important; 
+}
+.navbar .navbar-brand {
+	font-weight: bold;
+	color: black;
+}
+.main-part {
+	background: #D2EDFC;
+	padding-top: 30px;
+	margin-top: 30px;
+	width: 100%;
+}
+body {
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    width: 100%;
+}
+.accordion {
+  font-weight: bold;
+  background-color: #c4c4c4;
+  color: #444;
+  cursor: pointer;
+  padding: 10px;
+  width: 70%;
+  text-align: center;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.active, .accordion:hover {
+  background-color: #ffffff;
+}
+.panel {
+  overflow: hidden;
+  align-content: center;
+  background-color: #eee;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+  margin-bottom: 0px;
+  width: 70%;
+  padding-top: 0 18px;
+  margin: 0 0 0 172px;
+
+
+}
+
+.accord-sect {
+	text-align: center;
+  padding-top: 50px;
+  align-content: center;
+}
+
+input[type=text], input[type=email], textarea {
+  width: 50%; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 10px; 
+  resize: vertical; 
+  background-color: #c4c4c4 !important;
+  height: 35px;
+}
+
+input[type=submit] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 30px 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  align-content: center;
+  border-radius: 10px;
+  font-size: 17px;
+
+}
+.p1 {
+	font-size: 16px;
+	text-align: center;
+  padding-top: 15px;
+}
+input[type=submit]:hover {
+  background-color: #007dff;
+}
+
+.form-container {
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 0px;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+.sticky + .content {
+  padding-top: 102px;
+}
